@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-codegen-12052502 
+  description: Secure Supply Chain Example for Code Generation Application   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=test-codegen-12052502  
+    janus-idp.io/tekton: test-codegen-12052502 
+    backstage.io/kubernetes-id: test-codegen-12052502 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: tpetkos/test-codegen-12052502
+  tags: ["ai", "llamacpp", "vllm", "python"] 
+spec:
+  type: service
+  owner: user:default/tpetkos 
+  lifecycle: experimental
+ 
